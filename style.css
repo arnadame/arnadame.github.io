@@ -647,9 +647,10 @@
 
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 570px) {
     .myweb-p{
-        line-height: normal;
+        line-height: 25px;
+        font-size: 23px;
     }
     
 }
