@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-viewport');
-        head.style.animation = 'sample1 1.7s ease-out';
+        head.style.animation = 'sample1 1.5s ease-out';
         head.style.visibility = 'visible';
       } else {
         entry.target.classList.remove('in-viewport');
@@ -35,12 +35,48 @@ document.addEventListener('DOMContentLoaded', function () {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-viewport');
-        webp.style.animation = 'sample1 1.7s ease-out';
+        webp.style.animation = 'sample1 1.5s ease-out';
         webp.style.visibility = 'visible';
       } else {
         entry.target.classList.remove('in-viewport');
         webp.style.animation = 'none';
         webp.style.visibility = 'hidden';
+      }
+    });
+  }, {
+    threshold: 0
+  });
+
+  const tabTitle = document.querySelector('.tab-title');
+
+  const tabTitleObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-viewport');
+        entry.target.style.animation = 'sample1 1.6s ease-out';
+        entry.target.style.visibility = 'visible';
+      } else {
+        entry.target.classList.remove('in-viewport');
+        entry.target.style.animation = 'none';
+        entry.target.style.visibility = 'hidden';
+      }
+    });
+  }, {
+    threshold: 0
+  });
+
+  const tabList = document.querySelectorAll('.tab-list');
+
+  const tabListObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-viewport');
+        entry.target.style.animation = 'appear2 1.7s ease-out';
+        entry.target.style.visibility = 'visible';
+      } else {
+        entry.target.classList.remove('in-viewport');
+        entry.target.style.animation = 'none';
+        entry.target.style.visibility = 'hidden';
       }
     });
   }, {
@@ -86,6 +122,10 @@ document.addEventListener('DOMContentLoaded', function () {
 box_skills.forEach(box => {
   boxObserver.observe(box);
 });
+tabList.forEach(tab => {
+  tabListObserver.observe(tab);
+});
+  tabTitleObserver.observe(tabTitle);
   pictObserver.observe(picture);
   headObserver.observe(head);
   webpObserver.observe(webp);
@@ -103,6 +143,22 @@ box_skills.forEach(box => {
     }
 
   })
+
+  const tabLinks = document.querySelectorAll(".tab-links");
+  const tabContents = document.querySelectorAll(".tab-contents");
+  
+  tabLinks.forEach((tabLink, index) => {
+    tabLink.addEventListener("click", () => {
+
+      tabLinks.forEach(link => link.classList.remove("active-link"));
+  
+      tabContents.forEach(content => content.classList.remove("active-tab"));
+  
+      tabLink.classList.add("active-link");
+  
+      tabContents[index].classList.add("active-tab");
+    });
+  });
 
   document.querySelector('.form-wrapper').addEventListener('submit', function (event) {
     event.preventDefault();
