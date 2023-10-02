@@ -71,8 +71,8 @@
     position: absolute;
     display: none;
     right: 10px;
-    width: 50px;
-    height: 10vh;
+    width: 40px;
+    height: 2.5rem;
     z-index: 5;
     opacity: 0;
     cursor: pointer;
@@ -82,16 +82,16 @@
     position: absolute;
     display: none;
     right: 10px;
-    width: 50px;
-    height: 10vh;
+    width: 40px;
+    height: 2.5rem;
     background-color: rgba(7, 8, 3, 0);
 }
 
 .hamburger-lines{
     position: absolute;
     right: 10px;
-    width: 50px;
-    height: 4rem;
+    width: 35px;
+    height: 2.5rem;
     display: none;
     flex-direction: column;
     justify-content: space-evenly;
@@ -101,7 +101,7 @@
 
 .lines{
     display: none;
-    height: 4px;
+    height: 2px;
     width: 100%;
     border-radius: 10px;
     background: #f2faff;
@@ -193,7 +193,7 @@
   }
 
 .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg);
+    transform: rotate(40deg);
 }
   
 .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
@@ -201,7 +201,7 @@
 }
   
 .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg);
+    transform: rotate(-40deg);
 }
 
 /*Landing Page*/
@@ -640,6 +640,9 @@
         width: 100%;
     }
 
+    .navbar{
+        min-height: 7vh;
+    }
 }
 
 @media screen and (max-width: 570px) {
