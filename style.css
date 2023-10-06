@@ -364,7 +364,7 @@
 
 .box-skills{
     background: #353535;
-    border-radius: 10px;
+    border-radius: 20px;
     min-width: 15rem;
     min-height: 20rem;
     color: white;
@@ -373,6 +373,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 @keyframes appear {
@@ -407,19 +408,51 @@
 
 .box-skills:hover{
     cursor: pointer;
-    z-index: 1;
-    transition: 0.25s ease-in;
-    transform: scale(1.2,1.2);
 }
 
-.box-skills:not(:hover) {
-    transition: 0.25s ease-in;
-    transform: scale(1, 1);
+.box-skills:hover .box-description{
+    visibility: visible;
+    opacity: 0.85;
+    transition: linear 200ms;
+    background: linear-gradient(to bottom, #353535, #070803);
+
+}
+
+.box-skills:not(:hover) .box-description{
+    transition: linear 500ms;
+    opacity: 0;
+    visibility: hidden;
+    background: linear-gradient(to bottom, #353535, #070803);
 }
 
 .box-skills p{
     padding: 2rem 1rem;
-    font-size: 30px;
+    font-size: 20px;
+}
+
+.box-skills a{
+    position: absolute;
+    z-index: 1;
+    border-radius: 20px;
+    width: 15rem;
+    height: 20rem;
+}
+
+.box1-icon{
+    position: absolute;
+    border-radius: 20px;
+    width: 15rem;
+    height: 20rem;
+}
+
+.box-description{
+    position: absolute;
+    visibility: hidden;
+    border-radius: 20px;
+    min-width: 15rem;
+    min-height: 20rem;
+    padding-top: 12rem;
+    opacity: 0;
 }
 
 /* Contact Section */
