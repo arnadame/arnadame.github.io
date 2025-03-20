@@ -5,140 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Adame | Web Portfolio</title>
 </head>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-<body class="bg-body">
-    <div class="main" id="home">
+    <!-- <link rel="stylesheet" href="static/css/style.css"> -->
+    <link rel="stylesheet" href="static/css/flowbite.min.css">
+    <link rel="stylesheet" href="static/css/output.css" >
+    <script src="static/js/particles.min.js"></script>
 
-        <!-- Header -->
-
-        <header class="navbar">
-            <h2 class="logo text-des">ARN</h2>
-            <ul class="list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <input class="hamburger" type="checkbox">
-            <span class="checkmark"></span>
-            <div class="hamburger-lines">
-                <span class="lines line1"></span>
-                <span class="lines line2"></span>
-                <span class="lines line3"></span>
+<body>
+    <div id="lottie-container" class="h-screen w-screen"></div>
+    <!-- <main>
+        <nav class="w-full h-15 flex bg-[#1B1B1B]">
+            <div class="w-full flex items-center pl-10">
+                LOGO HERE
             </div>
-            <div class="hamburger-menu">
-                <a href="#home">Home</a>
-                <a href="#aboutme">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+            <div class="w-full">
+                <ul class="w-full flex items-center h-full justify-around px-40">
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        Skills
+                    </li>
+                    <li>
+                        Projects
+                    </li>
+                </ul>
             </div>
-        </header>
-
-        <div class="title-wrapper">
-            <h1 class="title-main">
-                <span class="cpe">Computer Engineer</span><br>
-                Hi, I'm <span class="word-color">Aaron</span><br>
-                <span class="word-color">Hire</span> me!
-            </h1>
+        </nav>          
+  
+        <div class="bg-[#1B1B1B]">
+            <div id="particles-js"></div>
         </div>
-        
-        <!-- Main Page -->
-
-        <div class="aboutme-section" id="aboutme">
-            <div class="border-wrapper">
-                <div class="myweb-wrapper">
-                    <p class="myweb-p">Hello! I'm aspiring to be a Front-End Developer with my burning passion and keen interest in programming. 
-                        I believe that combining my strong technical skills with creativity will allow me to craft 
-                        engaging and user-friendly web experiences.
-                    </p>
-                    <div class="tab-title">
-                        <p class="tab-links active-link" id="skills"> Skills</p>
-                        <p class="tab-links" id="education"> Education</p>
-                        <p class="tab-links" id="experience"> Experience</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul class="tab-list">
-                            <li>Python</li>
-                            <li>JavaScript</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul class="tab-list">
-                            <li><span class="word-color">2019 - 2023</span></li>
-                            <li>Batangas State University</li>
-                            <li><span class="word-color">2017 - 2019</span></li>
-                            <li>University of Batangas</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul class="tab-list">
-                            <li><span class="word-color">Cloudswyft Global System Inc</span></li>
-                            <li>Software Development</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="icon1-wrapper"></div>
-            </div>
-        </div>
-
-        <div class="skills-section" id="projects">
-            <h1>Projects</h1>
-            <div class="box-wrapper">
-                <div class="box-skills">
-                    <a href="https://arnadame.github.io/ToDoList/" target="_blank"></a>
-                    <img src="pics/to-do-list-icon.jpg" alt="To Do List" class="box1-icon">
-                    <div class="box-description">
-                        <p>Interactive <br>To Do List <br>App</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="contact-section" id="contact">
-            <div class="fix-wrapper">
-                <div class="contact-picture-wrapper">
-                    <div class="picture-wrapper"></div>
-                </div>
-                <div class="contact-wrapper">
-                    <div class="form-wrapper">
-                        <h1>Let's Talk!</h1>
-                        <form class="main-form">
-                            <input type="text" class="name" placeholder="Name" required>
-                            <input type="text" class="subject" placeholder="Subject" required>
-                            <textarea class="message" placeholder="Message" required></textarea>
-                            <input type="submit" class="submit" value="Send">
-                            <div class="message-box"></div> 
-                        </form>  
-                    </div>
-                    <div class="icon-wrapper">
-                        <a href="https://www.linkedin.com/in/aaron-adame-13a821282/" target="_blank"><img src="pics/linkedin2.png" alt="LinkedIn" class="linkedin-icon"></a>
-                        <a href="https://github.com/arnadame" target="_blank"><img src="pics/github2.png" alt="Github" class="github-icon"></a>
-                        <a href="/files/AdameAaronM-Resume.pdf" download="AdameAaronM-Resume" target="_blank"><img src="pics/cv2.png" alt="Resume" class="cv-icon"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <h1>Attributions</h1>
-            <a href="https://www.vecteezy.com/png/24387908-3d-male-character-happy-working-on-a-laptop" target="_blank">3d male character happy working on a laptop PNGs by Vecteezy</a>
-            <a href="https://www.flaticon.com/free-icons/github" title="github icons" target="_blank">Github icons created by Freepik - Flaticon</a>
-            <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons" target="_blank">Linkedin icons created by Freepik - Flaticon</a>
-            <a href="https://www.flaticon.com/free-icons/cv" title="CV icons" target="_blank">CV icons created by Freepik - Flaticon</a>
-            <p> @ 2023 Aaron Adame</p>
-        </footer>
-
-    </div> 
-    <script src="index.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    </main> -->
+    
+    <script src="static/js/stars-particle.js"></script>
+    <script src="static/js/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             emailjs.init('D-IlhWqqTnUQyg10A');
         })();
+    </script> -->
+    <script>
+        const animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-container'), // HTML container
+            renderer: 'svg', // Options: 'svg', 'canvas', 'html'
+            loop: true, // Animation loop
+            autoplay: true, // Auto play animation
+            path: 'static/assets/json/under-construction.json' // Path to your Lottie JSON
+        });
     </script>
 </body>
 </html>
