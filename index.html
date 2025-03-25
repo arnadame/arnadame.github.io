@@ -13,21 +13,22 @@
 
 <body>
     <!-- <div id="lottie-container" class="h-screen w-screen"></div> -->
-    <main>         
+    <main>      
+
         <nav class="w-full h-20 fixed z-50 flex bg-[#1B1B1B]">
             <div class="w-full flex lg:justify-around items-center p-5">
-                <img src="static/assets/svg/sample-logo.svg" alt="">
+                <a href="#home"><img src="static/assets/svg/sample-logo.svg" alt=""></a>
             </div>
             <div class="w-full hidden lg:block">
                 <ul class="w-full flex items-center h-full justify-start lg:gap-24 xl:gap-32">
                     <li class="text-white text-xl">
-                        <a href="#" class="after:block after:h-[2px] after:mt-3 after:w-0 after:bg-blue-400 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"><span class="text-blue-400">01. </span>About</a>
+                        <a href="#aboutSection" class="after:block after:h-[2px] after:mt-3 after:w-0 after:bg-blue-300 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"><span class="text-blue-300">01. </span>About</a>
                     </li>
                     <li class="text-white text-xl">
-                        <a href="#" class="after:block after:h-[2px] after:mt-3 after:w-0 after:bg-blue-400 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"><span class="text-blue-400">02. </span>Skills</a> 
+                        <a href="#projectSection" class="after:block after:h-[2px] after:mt-3 after:w-0 after:bg-blue-300 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"><span class="text-blue-300">02. </span>Projects</a> 
                     </li>
                     <li class="text-white text-xl">
-                        <a href="#" class="after:block after:h-[2px] after:mt-3 after:w-0 after:bg-blue-400 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"><span class="text-blue-400">03. </span>Projects</a>
+                        <a href="#contactSection" class="after:block after:h-[2px] after:mt-3 after:w-0 after:bg-blue-300 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"><span class="text-blue-300">03. </span>Contact</a>
                     </li>
                 </ul>
             </div>
@@ -41,31 +42,54 @@
                 <div class="hidden w-full" id="navbar-hamburger">
                     <ul class="flex flex-col w-auto font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
                         <li>
-                            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm dark:bg-blue-600" aria-current="page">Home</a>
+                            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm dark:bg-blue-600" aria-current="page">About</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Services</a>
+                            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Projects</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Contact</a>
+                            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>  
-        </nav>          
-        <div class="bg-[#1B1B1B] relative flex items-center h-dvh">
+        </nav>  
+
+        <section class="bg-[#1B1B1B] relative flex items-center h-dvh" id="home">
             <div class="static z-10 p-5 flex flex-col gap-7 md:ml-25 lg:ml-50 bg-[#1B1B1B]">
                 <h1 class="text-4xl lg:text-5xl xl:text-7xl text-white tracking-widest lg:tracking-wider">Hello,</h1>
-                <h1 class="text-4xl lg:text-5xl xl:text-7xl text-white tracking-widest lg:tracking-wider">I am <span class="text-blue-400">Aaron</span>,</h1>
+                <h1 class="text-4xl lg:text-5xl xl:text-7xl text-white tracking-widest lg:tracking-wider">I am <span class="text-blue-300">Aaron</span>,</h1>
                 <h1 class="text-4xl lg:text-5xl xl:text-7xl text-white tracking-widest leading-[60px] md:leading-none lg:tracking-wider">Front End <span class="tracking-[9px] lg:tracking-wider">Developer</span></h1>
             </div>
             <div id="particles-js" class="h-dvh absolute"></div>
-        </div>
-        <div class="bg-[#1B1B1B] h-dvh">
-        </div>
+        </section>
+
+        <section class="bg-[#1B1B1B] h-dvh flex" id="aboutSection">
+            <div class="w-full flex flex-col px-5 items-center justify-center">
+                <h1 class="text-white text-4xl"><span class="text-blue-300">Skills</span> and Tools</h1>
+                <p class="text-white text-2xl pt-5 px-25">Front-End Web Developer skilled in turning ideas into visually appealing and responsive user interfaces using tools like <span class="text-blue-300 font-semibold">Bootstrap</span> and  <span class="text-blue-300 font-semibold">Tailwind CSS</span>. Proven track record of collaborating seamlessly with teams to create dynamic, user-focused web solutions.
+                </p>
+            </div>
+            <div class="w-full flex items-center justify-center">
+                <h1 class="text-white">three js skills here</h1>
+            </div>
+        </section>
+        <section class="bg-[#1B1B1B] h-dvh flex" id="projectSection">
+            <div class="w-full flex items-center justify-center">
+                <h1 class="text-white">projects</h1>
+            </div>
+            <div class="w-full flex items-center justify-center">
+                <h1 class="text-white">maybe projects here</h1>
+            </div>
+        </section>
+        <section class="bg-[#1B1B1B] h-dvh flex" id="contactSection">
+            <div class="w-full flex items-center justify-center">
+                <h1 class="text-white">contacts</h1>
+            </div>
+            <div class="w-full flex items-center justify-center">
+                <h1 class="text-white">maybe contacts here</h1>
+            </div>
+        </section>
     </main>
     
     <script src="static/js/stars-particle.js"></script>

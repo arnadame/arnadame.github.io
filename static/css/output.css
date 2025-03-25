@@ -7,7 +7,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-blue-300: oklch(0.809 0.105 251.813);
-    --color-blue-400: oklch(0.707 0.165 254.624);
     --color-blue-500: oklch(0.623 0.214 259.815);
     --color-blue-600: oklch(0.546 0.245 262.881);
     --color-blue-700: oklch(0.488 0.243 264.376);
@@ -30,6 +29,8 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -542,6 +543,9 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .px-25 {
+    padding-inline: calc(var(--spacing) * 25);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -557,8 +561,15 @@
   .pt-2 {
     padding-top: calc(var(--spacing) * 2);
   }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
   .text-center {
     text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-4xl {
     font-size: var(--text-4xl);
@@ -604,8 +615,8 @@
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
   }
-  .text-blue-400 {
-    color: var(--color-blue-400);
+  .text-blue-300 {
+    color: var(--color-blue-300);
   }
   .text-blue-600 {
     color: var(--color-blue-600);
@@ -688,10 +699,10 @@
       width: calc(var(--spacing) * 0);
     }
   }
-  .after\:bg-blue-400 {
+  .after\:bg-blue-300 {
     &::after {
       content: var(--tw-content);
-      background-color: var(--color-blue-400);
+      background-color: var(--color-blue-300);
     }
   }
   .after\:transition-all {
@@ -1034,7 +1045,6 @@
 * {
   scroll-behavior: smooth;
   font-family: 'Montserrat';
-  scroll-padding: 10vh;
 }
 @property --tw-translate-x {
   syntax: "*";
