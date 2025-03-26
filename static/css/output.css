@@ -1069,17 +1069,6 @@
       }
     }
   }
-  .md\:dark\:hover\:text-white {
-    @media (width >= 48rem) {
-      @media (prefers-color-scheme: dark) {
-        &:hover {
-          @media (hover: hover) {
-            color: var(--color-white);
-          }
-        }
-      }
-    }
-  }
 }
 * {
   scroll-behavior: smooth;
