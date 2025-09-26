@@ -6,7 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="flex flex-col h-full items-center justify-center">
     <div class="grid lg:grid-cols-4 lg:grid-rows-6 max-w-screen-xl p-10 gap-5">
       <div
-        class="dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:row-span-3 flex flex-col lg:flex-row items-center"
+        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:row-span-3 flex flex-col lg:flex-row items-center"
       >
         <div
           class="w-full lg:w-2/3 xl:w-full h-full text-left flex flex-col justify-between"
@@ -26,22 +26,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="grid grid-cols-2 lg:flex gap-3">
             <!-- From Uiverse.io by ayman-ashine -->
             <div class="group relative flex justify-center items-center text-black text-sm font-bold">
-              <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-lime-200 to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
+              <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-lime-200  dark:to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
 								<img src="static/images/github.svg" alt="">
 								<span class="text-[0px] group-hover:text-sm duration-300">Github</span>
               </div>
             </div>
 
             <div class="group relative flex justify-center items-center text-black text-sm font-bold">
-              <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-lime-200 to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
+              <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-lime-200  dark:to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
 								<img src="static/images/linkedin.svg" alt="">
 								<span class="text-[0px] group-hover:text-sm duration-300">LinkedIn</span>
               </div>
             </div>
-
-            <!-- <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-[#171717] dark:text-white dark:border-lime-200 dark:hover:bg-[#383838] dark:hover:border-gray-600 dark:focus:ring-gray-700">Light</button>
-						<button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-[#171717] dark:text-white dark:border-lime-200 dark:hover:bg-[#383838] dark:hover:border-gray-600 dark:focus:ring-gray-700">Light</button>
-						<button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-[#171717] dark:text-white dark:border-lime-200 dark:hover:bg-[#383838] dark:hover:border-gray-600 dark:focus:ring-gray-700">Light</button> -->
           </div>
         </div>
         <div class="w-full lg:w-2/3 h-full">
@@ -53,7 +49,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
       </div>
       <div
-        class="dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 lg:row-start-1 lg:row-span-5 flex flex-col"
+        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 lg:row-start-1 lg:row-span-5 flex flex-col"
       >
         <h1 class="font-bold text-2xl poppins">About Me</h1>
         <p class="inter font-light text-md">
@@ -79,42 +75,51 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
       </div>
       <div
-        class="dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 lg:row-start-4 lg:row-span-3 flex flex-col items-center"
+        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 lg:row-start-4 lg:row-span-3 flex flex-col"
       >
-        3rd item
+        <h1 class="poppins font-bold text-lg">Let's start working together!</h1>
+        <p class="inter font-extralight italic dark:text-gray-300 mt-5">Contact Me</p>
+        <p class="inter font-light">arnadame10@gmail.com</p>
+        <ul class="max-w-md space-y-1 inter mt-5 font-light list-inside">
+          <li class="font-extralight italic dark:text-gray-300">Socials</li>
+          <li>Linkedin</li>
+          <li>Github</li>
+          <li>Medium</li>
+          <li>Discord</li>
+        </ul>
       </div>
       <div
-        class="dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 flex flex-col items-center"
+        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 flex flex-col items-center"
       >
         4th item
       </div>
-			<a class="cursor-pointer dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 px-10 flex items-center justify-center" href="#">
+			<a class="cursor-pointer dark:text-white bg-gray-200 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 px-10 flex items-center justify-center" href="#">
 				<div
 					class="flex items-center justify-between w-full"
 				>
 					<h1 class="poppins text-3xl">Projects</h1>
-					<svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<svg width="25px" height="25px" class="stroke-black dark:stroke-white" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M7 17L17 7M17 7H8M17 7V16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</div>
 			</a>
       <div
-        class="dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 lg:row-start-5 lg:row-span-2 flex flex-col items-center"
+        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 lg:row-start-5 lg:row-span-2 flex flex-col items-center"
       >
         6th item
       </div>
-			<a class="cursor-pointer dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 px-10 flex items-center justify-center" href="#">
+			<a class="cursor-pointer dark:text-white bg-gray-200 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 px-10 flex items-center justify-center" href="#">
 				<div
 					class="flex items-center justify-between w-full"
 				>
 					<h1 class="poppins text-3xl">Blogs</h1>
-					<svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<svg width="25px" height="25px" class="stroke-black dark:stroke-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M7 17L17 7M17 7H8M17 7V16"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</div>
 			</a>
       <div
-        class="dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 flex flex-col items-center"
+        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 flex flex-col justify-center items-center"
       >
         <button
           id="theme-toggle"
@@ -145,9 +150,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </button>
       </div>
       <div
-        class="dark:text-white bg-gray-100 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 flex flex-col items-center"
+        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 flex flex-col justify-center items-center"
       >
-        9th item
+        <p class="inter text-sm font-light">© 2025 · Made using Astro 🚀.</p>
       </div>
     </div>
   </div>
