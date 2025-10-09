@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectsCard from "../components/ProjectsCard.astro"
+
+---
+<BaseLayout>
+  <!-- <h1 class="dark:text-white">Projects</h1> -->
+  <div class="flex justify-center w-full">
+    <div class="grid grid-cols-3 gap-5">
+      <ProjectsCard />
+      <ProjectsCard />
+      <ProjectsCard />
+    </div>
+  </div>
+</BaseLayout>
