@@ -1,0 +1,91 @@
+---
+---
+<div id="dot-container" class="relative w-full h-full">
+  <div
+    id="dot"
+    class="absolute bg-red-500 rounded-full cursor-pointer hidden transition-all duration-150"
+  ></div>
+
+  <div id="message" class="absolute top-2 left-2 text-sm inter dark:text-white">
+    Ready to test your reflexes? Click anywhere to begin!
+  </div>
+
+  <button
+    id="retry"
+    class="hidden absolute bottom-2 right-2 bg-amber-500 hover:bg-amber-600 text-black text-xs font-bold py-1 px-3 rounded transition-all duration-150"
+  >
+    Try Again
+  </button>
+
+  <script is:inline>
+    const container = document.getElementById("dot-container");
+    const dot = document.getElementById("dot");
+    const message = document.getElementById("message");
+    const retry = document.getElementById("retry");
+
+    let startTime = 0;
+    let clicked = false;
+
+    function getRandomPosition(dotSize, containerWidth, containerHeight) {
+      const maxX = containerWidth - dotSize;
+      const maxY = containerHeight - dotSize;
+      const x = Math.floor(Math.random() * maxX);
+      const y = Math.floor(Math.random() * maxY);
+      return { x, y };
+    }
+
+    function moveDot() {
+      const containerRect = container.getBoundingClientRect();
+      const containerWidth = containerRect.width;
+      const containerHeight = containerRect.height;
+
+      const dotSize = Math.min(containerWidth, containerHeight) * 0.2;
+
+      const { x, y } = getRandomPosition(dotSize, containerWidth, containerHeight);
+
+      dot.style.width = dotSize + "px";
+      dot.style.height = dotSize + "px";
+      dot.style.left = x + "px";
+      dot.style.top = y + "px";
+      dot.classList.remove("hidden");
+
+      startTime = performance.now();
+    }
+
+    function resetGame() {
+      clicked = false;
+      message.textContent = "Click anywhere to start!";
+      retry.classList.add("hidden");
+      dot.classList.add("hidden");
+
+      // Reattach the one-time event to start
+      container.addEventListener("click", startGame, { once: true });
+    }
+
+    function startGame() {
+      message.textContent = "Get ready...";
+      setTimeout(() => {
+        moveDot();
+      }, Math.random() * 1000 + 500);
+    }
+
+    dot.addEventListener("click", () => {
+      if (clicked) return;
+      clicked = true;
+
+      const endTime = performance.now();
+      const reactionTime = ((endTime - startTime) / 1000).toFixed(3);
+
+      message.textContent = `🎯 Reaction Time: ${reactionTime}s`;
+      dot.classList.add("hidden");
+
+      retry.classList.remove("hidden");
+    });
+
+    retry.addEventListener("click", () => {
+      resetGame();
+    });
+
+    container.addEventListener("click", startGame, { once: true });
+  </script>
+</div>
