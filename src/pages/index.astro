@@ -90,9 +90,10 @@ import Dot from "../components/dot.astro"
         </ul>
       </div>
       <div
-        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 flex flex-col items-center"
+        class="dark:text-white bg-gray-200 dark:bg-[#171717] hover:border-amber-400 hover:shadow-md dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 flex flex-col justify-around"
       >
-        4th item
+        <h1 id="currentDate" class="poppins text-2xl"></h1>
+        <h1 id="currentTime" class="poppins text-2xl"></h1>
       </div>
 			<a class="cursor-pointer dark:text-white bg-gray-200 dark:bg-[#171717] dark:hover:border-lime-200 rounded-lg border border-[#383838] p-5 px-10 flex items-center justify-center" href="/projects">
 				<div
@@ -157,4 +158,27 @@ import Dot from "../components/dot.astro"
       </div>
     </div>
   </div>
+
+  <script>
+      import moment from 'moment-timezone';
+
+      const userTimezone = moment.tz.guess();
+      function updateDateTime(){
+        const currentTime = moment().tz(userTimezone).format('LTS');
+        const currentDate = moment().tz(userTimezone).format('LL')
+  
+        const cd = document.querySelector('#currentDate')
+        const ct = document.querySelector('#currentTime')
+        if (cd) {
+          cd.textContent=currentDate
+        }
+        if (ct) {
+          ct.textContent=currentTime
+        }
+      }
+      
+      updateDateTime();
+      setInterval(updateDateTime, 1000);
+
+  </script>
 </BaseLayout>
