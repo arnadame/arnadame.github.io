@@ -27,17 +27,21 @@ import Dot from "../components/dot.astro"
           <div class="grid grid-cols-2 lg:flex gap-3">
             <!-- From Uiverse.io by ayman-ashine -->
             <div class="group relative flex justify-center items-center text-black text-sm font-bold">
-              <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-lime-200  dark:to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
-								<img src="static/images/github.svg" alt="">
-								<span class="text-[0px] group-hover:text-sm duration-300">Github</span>
-              </div>
+              <a href="https://github.com/arnadame" target="_blank">
+                <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-lime-200  dark:to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
+                  <img src="static/images/github.svg" alt="">
+                  <span class="text-[0px] group-hover:text-sm duration-300">Github</span>
+                </div>
+              </a>
             </div>
 
             <div class="group relative flex justify-center items-center text-black text-sm font-bold">
-              <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-lime-200  dark:to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
-								<img src="static/images/linkedin.svg" alt="">
-								<span class="text-[0px] group-hover:text-sm duration-300">LinkedIn</span>
-              </div>
+              <a href="https://www.linkedin.com/in/aaron-adame-13a821282" target="_blank">
+                <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-lime-200  dark:to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
+                  <img src="static/images/linkedin.svg" alt="">
+                  <span class="text-[0px] group-hover:text-sm duration-300">LinkedIn</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -83,10 +87,21 @@ import Dot from "../components/dot.astro"
         <p class="inter font-light">arnadame10@gmail.com</p>
         <ul class="max-w-md space-y-1 inter mt-5 font-light list-inside">
           <li class="font-extralight italic dark:text-gray-300">Socials</li>
-          <li>Linkedin</li>
-          <li>Github</li>
-          <li>Medium</li>
-          <li>Discord</li>
+          <li>
+            <a href="https://www.linkedin.com/in/aaron-adame-13a821282">
+              Linkedin
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/arnadame">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Discord
+            </a>
+          </li>
         </ul>
       </div>
       <div
@@ -176,7 +191,7 @@ import Dot from "../components/dot.astro"
           ct.textContent=currentTime
         }
       }
-      
+
       updateDateTime();
       setInterval(updateDateTime, 1000);
 
