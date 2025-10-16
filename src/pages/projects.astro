@@ -2,16 +2,22 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectsCard from "../components/ProjectsCard.astro"
 
+import { getCollection } from "astro:content";
+
+const projects = await getCollection('Projects')
 ---
 <BaseLayout>
   <!-- <h1 class="dark:text-white">Projects</h1> -->
   <div class="flex items-center h-full justify-center w-full">
     <div class="grid grid-cols-3 gap-5 py-50">
-      <ProjectsCard />
-      <ProjectsCard />
-      <ProjectsCard />
-      <ProjectsCard />
-      <ProjectsCard />
+      {
+        projects.map((project:any) => 
+        <ProjectsCard
+          title={project.data.title}
+          description={project.data.description}
+        />
+        )
+      }
     </div>
   </div>
 </BaseLayout>
