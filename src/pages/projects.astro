@@ -15,6 +15,9 @@ const projects = await getCollection('Projects')
         <ProjectsCard
           title={project.data.title}
           description={project.data.description}
+          link={project.data.link}
+          src={project.data.image.src}
+          alt={project.data.image.alt}
         />
         )
       }
