@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectsCard from "../../components/ProjectsCard.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("Blogs");
+
+  return blogEntries.map((entry:any) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+---
+
+<BaseLayout>
+  <!-- <h1 class="dark:text-white">Projects</h1> -->
+  <div class="flex items-center h-full justify-center w-full">
+    <div class="grid grid-cols-3 gap-5 py-50">
+      <ProjectsCard />
+      <ProjectsCard />
+      <ProjectsCard />
+    </div>
+  </div>
+
+</BaseLayout>

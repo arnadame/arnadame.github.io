@@ -22,3 +22,11 @@ collections:
         fields:
           - { label: "Src", name: "src", widget: "image" }
           - { label: "Alt", name: "alt", widget: "string" }
+  - name: "blogs"
+    label: "Blogs"
+    folder: "src/content/blogs"
+    create: true
+    fields: 
+      - { label: "File Name", name: "fileName", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
