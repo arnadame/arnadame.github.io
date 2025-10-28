@@ -9,7 +9,7 @@ const projects = await getCollection('Projects')
 <BaseLayout>
   <!-- <h1 class="dark:text-white">Projects</h1> -->
   <div class="flex items-center h-full justify-center w-full">
-    <div class="grid grid-cols-3 gap-5 py-50">
+    <div class="grid lg:grid-cols-3 gap-5 py-50">
       {
         projects.map((project:any) => 
         <ProjectsCard
