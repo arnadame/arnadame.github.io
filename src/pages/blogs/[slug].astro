@@ -17,11 +17,22 @@ console.log(entry.data)
 ---
 
 <BaseLayout>
-  <!-- <h1 class="dark:text-white">Projects</h1> -->
-  <div class="flex items-center h-full justify-center w-full">
-    <div class="flex flex-col">
-      <h1 class="dark:text-white text-2xl poppins">{entry.data.title}</h1>
-      <p class="dark:text-white text-lg inter">{entry.data.paragraph}</p>
+
+  <div class="flex flex-col items-center h-full w-full">
+    <div class="px-5 lg:px-0 flex flex-col items-start pt-10 pb-30">
+      <div>
+        <a href="/blogs" class="cursor-pointer">
+          <svg width="40px" height="40px" class="stroke-black dark:stroke-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 17L7 7M7 7V16M7 7H16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="w-full">
+        <h1 class="dark:text-white text-2xl poppins my-10">{entry.data.title}</h1>
+        <p class="dark:text-white text-lg inter">{entry.data.paragraph}</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
