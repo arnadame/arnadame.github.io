@@ -2,14 +2,24 @@
 const props = Astro.props
 ---
 
-<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-    <a href={props.link}>
-        <img class="rounded-t-lg" src={props.src} alt={props.alt} />
-    </a>
-    <div class="p-5">
-        <a href={props.link} target="_blank">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.title}</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.description}</p>
+<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg hover:shadow-indigo-500/10 transition">
+  <a href={props.link} target="_blank" class="relative group block overflow-hidden">
+    <img
+      src={props.src}
+      alt={props.alt}
+      class="rounded-t-lg w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105 relative z-0"
+    />
+    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center z-10">
+      <span class="text-white font-semibold">View Project</span>
     </div>
+  </a>
+
+  <div class="p-5">
+    <a href={props.link} target="_blank">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.title}</h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.description}</p>
+  </div>
 </div>
+
+
