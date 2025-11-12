@@ -3,8 +3,8 @@ backend:
   repo: arnadame/arnadame.github.io
   branch: main
 
-media_folder: "static/images/uploads"
-# public_folder: "src/assets/images"
+media_folder: "public/static/images/uploads"
+public_folder: "static/images/uploads"
 
 collections:
   - name: "projects"
